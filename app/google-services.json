@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "810330595920",
+    "firebase_url": "https://easyeats-f590c.firebaseio.com",
+    "project_id": "easyeats-f590c",
+    "storage_bucket": "easyeats-f590c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:810330595920:android:620f01089c824ab0e3a755",
+        "android_client_info": {
+          "package_name": "com.example.easyeats"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "810330595920-oqn0k7eb5ornl7uvfkrl8dsc115kktm0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6j1OBIHbKO8Za1LxOTZ7TnqJ2-1YaWSM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "810330595920-oqn0k7eb5ornl7uvfkrl8dsc115kktm0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
