@@ -33,8 +33,9 @@ class WritePostFragment : Fragment() {
         db = Firebase.firestore
 
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_write_post, container, false)
+
         binding.cancelPost.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_writePostFragment)
+            findNavController().navigate(R.id.action_writePostFragment_to_homeFragment)
         }
 
         binding.submitPost.setOnClickListener {
