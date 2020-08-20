@@ -42,11 +42,19 @@ class HomeFragment : Fragment() {
         var adapter = GroupAdapter<GroupieViewHolder>()
         binding.allpostsRecyclerView.adapter = adapter
 
+        adapter.setOnItemClickListener { item, view ->
+            val postItem = item as PostItem
+            Log.d("Click Post", "Id: ${postItem.postItem.id}")
+            val action = HomeFragmentDirections.actionHomeFragmentToPostDetailFragment2(postItem.postItem.id)
+            findNavController().navigate(action)
+        }
+
         db.collection("posts").get()
             .addOnSuccessListener {
                 for (post in it){
                     val postResult = post.toObject<RecipePost>()
-                    Log.d("Post", "${postResult}")
+                    postResult.id = post.id
+                    Log.d("Post", "Id: ${postResult.id}")
                     adapter.add(PostItem(postResult))
                 }
             }
@@ -67,7 +75,7 @@ class HomeFragment : Fragment() {
     }
 }
 
-class PostItem(private val postItem: RecipePost) : Item(){
+class PostItem(val postItem: RecipePost) : Item(){
     override fun bind(viewHolder: GroupieViewHolder, position: Int) {
         viewHolder.PTitle.text = postItem.title
         viewHolder.pDescription.text = postItem.description
