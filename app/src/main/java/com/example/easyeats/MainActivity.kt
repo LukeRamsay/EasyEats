@@ -20,7 +20,7 @@ import com.google.firebase.ktx.Firebase
         auth = Firebase.auth
 
     }
-
+     //Might replace with a logout button at some point
      override fun onCreateOptionsMenu(menu: Menu?): Boolean {
          val inflater = menuInflater
          inflater.inflate(R.menu.main_menu, menu)

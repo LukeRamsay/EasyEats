@@ -48,5 +48,9 @@
         android:id="@+id/writePostFragment"
         android:name="com.example.easyeats.WritePostFragment"
         android:label="fragment_write_post"
-        tools:layout="@layout/fragment_write_post" />
+        tools:layout="@layout/fragment_write_post" >
+        <action
+            android:id="@+id/action_writePostFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 </navigation>
