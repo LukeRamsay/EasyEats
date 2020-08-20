@@ -44,7 +44,7 @@ class WritePostFragment : Fragment() {
                 "username" to auth.currentUser?.displayName,
                 "timestamp" to Timestamp.now(),
                 "title" to binding.postTitle.text.toString(),
-                "descriptions" to binding.postDescription.text.toString(),
+                "description" to binding.postDescription.text.toString(),
                 "ingredients" to binding.postIngredients.text.toString(),
                 "instructions" to binding.postInstructions.text.toString()
             )
