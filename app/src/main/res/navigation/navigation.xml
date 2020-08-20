@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_homeFragment_to_logInFragment"
             app:destination="@id/logInFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_writePostFragment"
+            app:destination="@id/writePostFragment" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
@@ -41,4 +44,9 @@
             android:id="@+id/action_logInFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/writePostFragment"
+        android:name="com.example.easyeats.WritePostFragment"
+        android:label="fragment_write_post"
+        tools:layout="@layout/fragment_write_post" />
 </navigation>
