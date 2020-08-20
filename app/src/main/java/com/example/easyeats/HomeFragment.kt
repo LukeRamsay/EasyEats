@@ -27,7 +27,7 @@ class HomeFragment : Fragment() {
             val firebaseUser = firebaseAuth.currentUser
             if (firebaseUser == null ){
                 Log.d("Authentication", "User is not logged in")
-                findNavController().navigate(R.id.action_homeFragment_to_registerFragment)
+                findNavController().navigate(R.id.logInFragment)
             }
         }
         return inflater.inflate(R.layout.fragment_home, container, false)

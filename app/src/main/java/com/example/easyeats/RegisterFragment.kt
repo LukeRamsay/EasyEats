@@ -63,6 +63,10 @@ class RegisterFragment : Fragment() {
                 }
         }
 
+        binding.gotoLogin.setOnClickListener {
+            findNavController().navigate(R.id.action_registerFragment_to_logInFragment)
+        }
+
         return binding.root
     }
 }
