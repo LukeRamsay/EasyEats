@@ -15,6 +15,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.toObject
 import com.google.firebase.ktx.Firebase
+import com.squareup.picasso.Picasso
 
 class PostDetailFragment : Fragment() {
 
@@ -36,11 +37,15 @@ class PostDetailFragment : Fragment() {
         db.collection("posts").document(args.postid).get()
             .addOnSuccessListener {
                 val item = it.toObject<RecipePost>()
+                if(item == null) return@addOnSuccessListener
                 binding.postDetailTitle.text = item?.title
                 binding.postDetailDescription.text = item?.description
                 binding.postDetailTimeStamp.text = item?.timestamp?.toDate().toString()
                 binding.postDetailIngredients.text = item?.ingredients
                 binding.postDetailInstructions.text = item?.instructions
+                if(item.headerImageUrl != ""){
+                    Picasso.get().load(item.headerImageUrl).fit().centerCrop().into(binding.postHeaderImage)
+                }
             }
             .addOnFailureListener {
                 Toast.makeText(context, "Error opening the recipe", Toast.LENGTH_SHORT).show()

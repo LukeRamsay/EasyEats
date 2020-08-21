@@ -11,6 +11,15 @@
         android:padding="20dp"
         >
 
+        <ImageView
+            android:id="@+id/postHeaderImage"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
         <TextView
             android:id="@+id/postDetailTitle"
             android:layout_width="match_parent"
@@ -20,7 +29,7 @@
             android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/postHeaderImage" />
 
         <TextView
             android:id="@+id/postDetailDescription"
@@ -62,7 +71,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/postDetailTimeStamp" />
+            app:layout_constraintTop_toBottomOf="@+id/postDetailIngredients" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

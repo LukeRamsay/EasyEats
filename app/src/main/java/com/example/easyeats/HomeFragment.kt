@@ -16,6 +16,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.toObject
 import com.google.firebase.ktx.Firebase
+import com.squareup.picasso.Picasso
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.kotlinandroidextensions.GroupieViewHolder
 import com.xwray.groupie.kotlinandroidextensions.Item
@@ -80,6 +81,9 @@ class PostItem(val postItem: RecipePost) : Item(){
         viewHolder.PTitle.text = postItem.title
         viewHolder.pDescription.text = postItem.description
         viewHolder.timeStamp.text = postItem.timestamp.toDate().toString()
+        if(postItem.headerImageUrl != "" && postItem.headerImageUrl.isNotEmpty()){
+            Picasso.get().load(postItem.headerImageUrl).fit().centerCrop().into(viewHolder.imageView)
+        }
     }
 
     override fun getLayout(): Int = R.layout.fragment_all_posts

@@ -7,6 +7,7 @@ data class RecipePost (
     val userId: String = "",
     val timestamp: Timestamp = Timestamp.now(),
     val title: String = "",
+    val headerImageUrl: String ="",
     val description: String = "",
     val ingredients: String ="",
     val instructions: String =""
